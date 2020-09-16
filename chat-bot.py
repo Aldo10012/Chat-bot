@@ -1,24 +1,21 @@
-# This will give you access to the random module or library.
-# choice() will randomly return an element in a list.
-# Read more: https://pynative.com/python-random-choice/
-
 from random import choice
 
 #combine functions and conditionals to get a response from the bot
-def get_mood_bot_response(user_response):
+def get_bot_response(user_response):
 
   #add some bot responses to this list
-  bot_response_happy = ["omg! great!", "Keep smiling!", "I love to see you happy!"]
-  bot_response_sad = ["im here for you", "sending good vibes"]
+  bot_response_peperoni = ["omg! great!", "Keep smiling!", "I love to see you happy!"]
+  bot_response_hawaiian = ["im here for you", "sending good vibes"]
+  bot_response_combo = ["im here for you", "sending good vibes"]
 
-  if user_response == "happy":
-    return choice(bot_response_happy)
-  elif user_response == "sad":
-    return choice(bot_response_sad)
+  if user_response == "peperoni":
+    return choice(bot_response_peperoni)
+  elif user_response == "hawaiian":
+    return choice(bot_response_hawaiian)
+  elif user_response == "combo":
+    return choice(bot_response_combo)
   else:
     return "I hope your day gets better"
-
-
 
 
 print("Welcome to Mood Bot")
@@ -34,5 +31,5 @@ while True:
     break
 
   
-  bot_response = get_mood_bot_response(user_response)
+  bot_response = get_bot_response(user_response)
   print(bot_response)

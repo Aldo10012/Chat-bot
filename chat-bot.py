@@ -1,6 +1,5 @@
 from random import choice
 
-#combine functions and conditionals to get a response from the bot
 def get_bot_response(user_response):
 
   #add some bot responses to this list
@@ -18,17 +17,15 @@ def get_bot_response(user_response):
     return "Sorry, we don't sell that."
 
 
+
 print("Welcome to Moe’s Pizza! ")
 
 user_response = ""
-#TODO: we want to keep repeating until the user enters "done" what should we put here?
 while True:
   user_response = input("What would you like to order?  ")
-  
   # Quits program when user responds with 'done'
   if user_response == 'done':
     break
-
   
   bot_response = get_bot_response(user_response)
   print(bot_response)
